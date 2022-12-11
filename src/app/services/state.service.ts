@@ -1,8 +1,13 @@
+import { FormGroup } from '@angular/forms';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { StateDto } from './../model/state';
 import { Observable } from 'rxjs';
+<<<<<<< HEAD
 import { environment } from './../../environments/environment';
+=======
+import { environment } from 'src/environments/environment';
+>>>>>>> fe94572c9638c8e06de7d9c13b39951e9604e6c5
 
 @Injectable({
   providedIn: 'root'
@@ -13,6 +18,17 @@ export class StateService {
 
 
   //apiServerUrl = "https://businesse-admin.herokuapp.com/shop-mania/v1";
+<<<<<<< HEAD
+=======
+
+  choixmenu : string  = 'A';
+
+  listData : StateDto[];
+
+  formData:  StateDto;
+
+  dataForm:  FormGroup;
+>>>>>>> fe94572c9638c8e06de7d9c13b39951e9604e6c5
 
   constructor(private http: HttpClient) {
   }
@@ -28,7 +44,7 @@ export class StateService {
   }
 
   public getStateDtoById(statId: number): Observable<StateDto> {
-    return this.http.get<StateDto>(`${this.apiServerUrl}/states/${statId}`);
+    return this.http.get<StateDto>(`${this.apiServerUrl}/states/findById/${statId}`);
   }
 
   public getStateDtoByDesignation(designation: string): Observable<StateDto> {

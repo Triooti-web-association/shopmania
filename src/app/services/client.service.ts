@@ -3,7 +3,11 @@ import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
+<<<<<<< HEAD
 import { environment } from './../../environments/environment';
+=======
+import { environment } from 'src/environments/environment';
+>>>>>>> fe94572c9638c8e06de7d9c13b39951e9604e6c5
 
 @Injectable({
   providedIn: 'root'
@@ -22,7 +26,7 @@ export class ClientService {
   }
 
   public getClientById(clientId: number): Observable<Client> {
-    return this.http.get<Client>(`${this.apiServerUrl}/clients/${clientId}`);
+    return this.http.get<Client>(`${this.apiServerUrl}/clients/findById/${clientId}`);
   }
 
   public addClient(client: Client): Observable<Client> {
@@ -48,7 +52,7 @@ export class ClientService {
   }
 
   public getClientDtoById(clientId: number): Observable<ClientDto> {
-    return this.http.get<ClientDto>(`${this.apiServerUrl}/clients/${clientId}`);
+    return this.http.get<ClientDto>(`${this.apiServerUrl}/clients/findById/${clientId}`);
   }
 
   public addClientDto(clientDTO: ClientDto): Observable<ClientDto> {

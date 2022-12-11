@@ -5,16 +5,21 @@ import { FormGroup } from '@angular/forms';
 
 import { Category, CategoryDto } from './../model/category';
 
-import { environment } from './../../environments/environment';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CategoryService {
+<<<<<<< HEAD
   
   apiServerUrl = environment.apiBaseUrl;
   
  // apiServerUrl = "http://62.171.128.8:8081/shop-mania/v1";
+=======
+
+   apiServerUrl = environment.apiBaseUrl;
+>>>>>>> fe94572c9638c8e06de7d9c13b39951e9604e6c5
 
 
   //apiServerUrl = "https://businesse-admin.herokuapp.com/shop-mania/v1";
@@ -33,7 +38,7 @@ export class CategoryService {
   }
 
   public getCategoryById(categoryId: number): Observable<Category> {
-    return this.http.get<Category>(`${this.apiServerUrl}/categories/${categoryId}`);
+    return this.http.get<Category>(`${this.apiServerUrl}/categories/findById/${categoryId}`);
   }
 
   public getCategoryByDesignation(designation: string): Observable<Category> {
@@ -60,11 +65,11 @@ export class CategoryService {
   }
 
   public getCategorieDTOsOrderByIdDesc(): Observable<CategoryDto[]> {
-    return this.http.get<CategoryDto[]>(`${this.apiServerUrl}/categories/searchAllCategorieOrderByIdDesc`);
+    return this.http.get<CategoryDto[]>(`${this.apiServerUrl}/categories/searchAllCategoriesOrderByIdDesc`);
   }
 
   public getCategoryDtoById(categoryId: number): Observable<CategoryDto> {
-    return this.http.get<CategoryDto>(`${this.apiServerUrl}/categories/${categoryId}`);
+    return this.http.get<CategoryDto>(`${this.apiServerUrl}/categories/findById/${categoryId}`);
   }
 
   public getCategoryDtoByDesignation(designation: string): Observable<CategoryDto> {

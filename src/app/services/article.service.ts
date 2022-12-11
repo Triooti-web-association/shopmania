@@ -4,8 +4,7 @@ import { Observable } from 'rxjs';
 import { HttpClient, HttpRequest, HttpEvent } from '@angular/common/http';
 import { Article, ArticleDto } from './../model/article';
 
-import { environment } from './../../environments/environment';
-
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -31,7 +30,7 @@ export class ArticleService {
   }
 
   public getArticleById(articleId: number): Observable<Article> {
-    return this.http.get<Article>(`${this.apiServerUrl}/articles/${articleId}`);
+    return this.http.get<Article>(`${this.apiServerUrl}/articles/findById/${articleId}`);
   }
 
   public getArticleByReference(reference: string): Observable<Article> {

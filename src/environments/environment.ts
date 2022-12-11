@@ -3,6 +3,7 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
+<<<<<<< HEAD
   production: true,
 //  production: true,
   // apiBaseUrl: 'http://localhost:8081/shop-mania/v1'
@@ -11,6 +12,10 @@ export const environment = {
 //  apiBaseUrl: 'http://localhost:8080/dpshop-backend-0.0.1-SNAPSHOT/shop-mania/v1'
 
  // apiBaseUrl: 'https://businesse-admin.herokuapp.com/shop-mania/v1'
+=======
+  production: false,
+  apiBaseUrl: 'http://localhost:8081/casa-solaire/v1'
+>>>>>>> fe94572c9638c8e06de7d9c13b39951e9604e6c5
 
 };
 
